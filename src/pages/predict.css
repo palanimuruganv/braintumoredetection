@@ -1,0 +1,145 @@
+/* predict.css */
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa00;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styling */
+  div {
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4A90E2;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+    margin: 20px 0;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+    color: #ffffff;
+  }
+  
+  /* Form and input styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 1em;
+    color: #ffffff;
+    margin: 10px 0 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="file"] {
+    padding: 10px;
+    border: 1px solid #d7858532;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  button {
+    padding: 8px 16px; /* Reduced padding */
+    margin-top: 5px;
+    font-size: 0.9em; /* Slightly smaller font size */
+    font-weight: bold;
+    color: #fff;
+    background-color: #619ce1;
+    border: none;
+    width: 50%;
+    border-radius: 3px; /* Slightly smaller border radius */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  
+  button:hover {
+    background-color: #08396a;
+  }
+  
+  /* Loading button state */
+  button[disabled] {
+    background-color: #a0c1e5;
+    cursor: not-allowed;
+  }
+  
+  /* Prediction result container */
+  .prediction-result-container {
+    background-color: rgba(0, 0, 0, 0.1); /* Adjusted for better readability */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.1);
+    display: flex; /* Added to enable flexbox alignment */
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+}
+
+  
+  .prediction-result p {
+    font-size: 1em;
+    color: #15ff04;
+  }
+  
+  /* Hospital results styling */
+  #district-search,
+  .hospital-results-container {
+    background-color: #fcfcfc00;
+    padding: 15px;
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .hospital-results-container h3 {
+    font-size: 1.1em;
+    color: #4A90E2;
+  }
+  
+  .hospital-results-container p {
+    font-size: 0.9em;
+    color: #ffffff;
+  }
+  
+  .hospital-results-container a {
+    color: #4A90E2;
+    text-decoration: none;
+  }
+  
+  .hospital-results-container a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Scroll-triggered animation */
+  [data-scroll] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  [data-scroll].visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

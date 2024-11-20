@@ -1,0 +1,82 @@
+/* Import the Algerian font using @font-face */
+@font-face {
+    font-family: 'Algerian';
+    src: url('C:/Users/91984/bri/Frondend/src/fonts/HigherJump.ttf') format('truetype');
+}
+.contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the container takes up the full height of the viewport */
+    margin: 0; /* Remove default margins */
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full viewport height */
+    flex-direction: column;
+    position: relative;  /* Required for placing content above the video */
+    z-index: 2;  /* Ensures content is above the video layer */
+    text-align: center;
+    background: transparent;  /* Removes any overlay effect */
+}
+
+
+/* Heading styling */
+.heading {
+    font-size: 4rem;  /* Large size */
+    font-weight: bold;
+    font-family: 'Algerian';  /* Apply Algerian font */
+    color: #463232; 
+    justify-content: center;
+    align-items: center; /* Text color for contrast */
+    z-index: 2;
+    text-shadow: 
+        6px 6px 0 #fff,   
+        -2px -2px 0 #fff,  
+        2px -2px 0 #fff,   
+        -2px 2px 0 #fff,   
+        2px 2px 0 #fff;
+    cursor: pointer;  /* Make the text clickable */
+    transition: transform 0.3s ease, color 0.3s ease; 
+    
+        background: transparent; /* Ensures no background color */
+                   /* Or whatever color you prefer */
+         /* Blends text with background */
+    
+     /* Smooth animation */
+}
+
+/* Animation for heading when clicked */
+.heading:hover {
+    transform: scale(1.1);  /* Slightly increase the size */
+    color: #4CAF50;  /* Change color on hover */
+}
+
+/* Button styling */
+.button {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #4CAF50;  /* Green background */
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Times New Roman', serif;
+    z-index: 2;  /* Ensure button stays on top of the video */
+}
+
+/* Video styling (make sure it's behind the content) */
+.video {
+    position: absolute;  /* Fix video to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* Cover the entire height of the viewport */
+    object-fit: cover;  /* Ensure the video covers the entire area without stretching */
+    z-index: -1;  /* Place the video behind the content */
+}

@@ -1,0 +1,42 @@
+/* src/App.css */
+/* In your App.css or equivalent CSS file */
+@import url('https://fonts.googleapis.com/css2?family=Higher+Jump&display=swap');
+
+.App {
+  position: relative;
+  height: 100vh; /* Make sure the app covers full height */
+  overflow: hidden; /* Prevent any overflow */
+}
+
+.background-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: auto;
+  transform: translate(-50%, -50%) scale(1.1); /* Center the video and increase scale */
+  
+  z-index: -1;
+}
+
+
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.3); /* Transparent dark background for nav */
+  padding: 1rem;
+  position: fixed; /* Fixed position to stay on top */
+  top: 0; /* Align to the top */
+  right: 0; /* Align to the right side */
+  z-index: 1; /* Ensure the navbar stays above the video */
+  width: auto; /* Auto width based on content */
+}
+
+.nav-link {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
